@@ -11,7 +11,7 @@ const Reviews = () => {
             try {
                 const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/count`);
                 setCount(res.data.count);
-            } catch {
+            } catch (err) {
                 console.error("Error fetching review count:", err);
             }
         }
