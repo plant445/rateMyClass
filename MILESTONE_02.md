@@ -7,15 +7,17 @@ https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment
 
 Special Instructions for Using Form (or Login details if auth is part of your project)
 ---
-For now, you can just upload a review and I hard coded a userID but in the future it will require auth to upload
+For now, you can just upload a review and I hard coded a userID but in the future it will require auth to upload. Go to rate page fill out info and it will auto direct to reviews page where you can see reviews.
 
 URL for form 
 ---
-(TODO: add link to a functioning form; okay to use temporary domain of your own codespaces container)
+https://github.com/plant445/rateMyClass/blob/main/frontend/src/pages/CreateReview.jsx
+
+This page(the rate page) when you open up CodeSpace has a working form
 
 URL for form result
 ---
-(TODO: if applicable, add link to page that shows results of submitting form)
+You can see the result of the page on the reviews page. Click reviews in the header when you open up CodeSpace Deployment
 
 URL to github that shows line of code where research topic(s) are used / implemented
 --- 
