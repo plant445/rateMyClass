@@ -43,7 +43,7 @@ const CreateReview = () => {
       }
       setError('');
       try {
-          const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/create`, formData)
+          const response = await axios.post(`/api/create`, formData)
           if (response.status === 201) {
             navigate('/reviews')
           }
