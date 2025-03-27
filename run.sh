@@ -4,7 +4,7 @@
  echo "Setting up frontend..."
  cd frontend
  npm install
- npm run build
+ npm run dev
  cd ..
 
  echo "Setting up backend..."
@@ -14,4 +14,4 @@
 
  echo "Starting server..."
  cd backend
- npm run start
+ npm run dev
