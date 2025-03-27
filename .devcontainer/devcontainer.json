@@ -1,0 +1,15 @@
+{
+    "name": "Express + React Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "hostRequirements": {
+        "cpus": 4
+    },
+    "postAttachCommand": {
+        "server": "/bin/sh run.sh"
+    },
+    "remoteEnv": {
+        "NODE_ENV": "${NODE_ENV}",
+        "PORT": "5555",
+        "MONGO_URI": "mongodb+srv://root1:root1@ratemyclass.xdwgs.mongodb.net/?retryWrites=true&w=majority&appName=rateMyClass"
+    }
+}
