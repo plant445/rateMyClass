@@ -10,6 +10,6 @@
     "remoteEnv": {
         "NODE_ENV": "${NODE_ENV}",
         "PORT": "5555",
-        "MONGO_URI": "mongodb+srv://root1:root1@ratemyclass.xdwgs.mongodb.net/?retryWrites=true&w=majority&appName=rateMyClass"
+        "MONGO_URI":"${{ secrets.MONGO_URI }}"
     }
 }
