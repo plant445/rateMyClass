@@ -195,18 +195,17 @@ const CreateReview = () => {
               />
               <p className="ml-2 inline text-sm text-gray-500">{formData.ratings.takeAgain} / 5</p>
             </div>
-
-            <div className='mt-7'>
-              <label className="mr-4 text-lg">Comments</label>
-                <input
-                  name="comment"
-                  placeholder="ex: Really engaging class!"
-                  value={formData.comment}
-                  onChange={(e) =>
-                    setFormData({ ...formData, comment: e.target.value })
-                  }
-                  className="border border-black px-3 py-2 rounded font-atma w-150 h-30"
-                />
+            <div className='mt-7 flex items-center gap-4 justify-center'>
+              <label className="text-lg whitespace-nowrap">Comments</label>
+              <textarea
+                name="comment"
+                placeholder="ex: Really engaging class!"
+                value={formData.comment}
+                onChange={(e) =>
+                  setFormData({ ...formData, comment: e.target.value })
+                }
+                className="border border-black px-3 py-2 rounded font-atma w-[600px] h-[120px]"
+              />
             </div>
           </div>
 
