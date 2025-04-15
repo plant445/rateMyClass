@@ -49,7 +49,7 @@ export default function LoginModal({onClose, onLoginSuccess}){
         <div className="font-atma fixed inset-0 flex justify-center items-center bg-black/50 transition-opacity">
             <div className="bg-white p-6 rounded-lg w-full max-w-md shadow relative">
                 <button onClick={handleClose} className="font-mono absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-black">×</button>
-                <h2 className="text-xl font-bold mb-4">{isLogin ? 'Sign In' : 'Register'}</h2>
+                <h2 className="text-xl font-bold mb-4">{isLogin ? 'Sign In To Review' : 'Register'}</h2>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">                   
                     <div className="w-full max-w-sm mb-2">

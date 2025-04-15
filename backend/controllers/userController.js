@@ -41,7 +41,7 @@ export const login = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: true,
+            secure: false,
             sameSite: 'strict',
             maxAge: 3600000
         })
@@ -69,6 +69,7 @@ export const verifyToken = (req, res, next) => {
 }
 
 export const getMe = (req, res) => {
+    console.log('[BACKEND] /api/me hit. User:', req.user);
     res.json({ username: req.user.username})
 }
 

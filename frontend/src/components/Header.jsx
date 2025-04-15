@@ -1,20 +1,29 @@
-import React, { useEffect } from 'react'
+import React, { use, useEffect,  } from 'react'
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom' 
 import '../index.css';
 import LoginModal from './LoginModal';
 import axios from 'axios';
 
-export default function Header({ username, onShowModal }) {
+export default function Header({ username, setUsername, onShowModal }) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const navigate = useNavigate()
     const handleLogout = async () => {
         try {
             await axios.post('/api/logout', {}, {withCredentials: true})
-            window.location.reload()
+            setUsername('')
+            navigate('/')
         } catch (err) {
             console.error('Logout failed:', err);
         }
-        
+    }
+
+    const handleClick = () => {
+        if (!username) {
+            onShowModal()
+        } else {
+            navigate('/create')
+        }
     }
 
 
@@ -23,7 +32,10 @@ export default function Header({ username, onShowModal }) {
                 <div className='flex pr-5 ml-auto'>
                     <Link to='/' className='px-2 hover:underline'>HOME</Link>
                     <Link to='/reviews' className='px-2 hover:underline'>REVIEWS</Link>
-                    <Link to='/create' className='px-2 hover:underline'>RATE</Link>
+
+                    <button onClick={handleClick} className='px-2 hover:underline h-full'>
+                        RATE
+                    </button>
 
                     {username ? (
                         (

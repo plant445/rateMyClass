@@ -5,6 +5,7 @@ import CreateReview from './pages/CreateReview.jsx'
 import Reviews from './pages/Reviews.jsx'
 import Header from './components/Header.jsx';
 import LoginModal from './components/LoginModal.jsx';
+import axios from 'axios'
 
 function App() {
   const [username, setUsername] = useState('')
@@ -13,18 +14,19 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
           try {
-              const res = await axios.get('/api/me', { withCredentials: true });
-              setUsername(res.data.username);
-          } catch {
-              setUsername('');
+              const res = await axios.get('/api/me', { withCredentials: true })
+              setUsername(res.data.username)
+          } catch(err) {
+              setUsername('')
           }
-      };
-      fetchUser();
-  }, []);
+    }
+
+    fetchUser()
+  }, [])
 
   return (
     <>
-      <Header username={username} onShowModal={() => setShowModal(true)}/>
+      <Header username={username} setUsername={setUsername} onShowModal={() => setShowModal(true)}/>
       {showModal && (
         <LoginModal
           onClose={() => setShowModal(false)}
