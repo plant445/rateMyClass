@@ -33,7 +33,6 @@ const Reviews = () => {
 
     return (
         <div>
-            <div class='mb-20'><Header /></div>
             <div class='flex flex-col text-center mb-15'>
                 <h1 class="text-6xl font-bold mb-4 font-atma text-gray-200 tracking-wide text-outline">Course Reviews</h1>
                 <p class="text-lg text-black font-atma ">Browse all {count} reviews</p>

@@ -5,8 +5,6 @@ import Header from '../components/Header.jsx'
 const Home = () => {
     return (
         <div>
-            <div class='mb-10'><Header /></div>
-
             <div class='bg-[url(images/coursestock.jpg)] bg-cover bg-center pt-20 pb-1 mb-15'>
                 <div class="flex flex-col text-center mb-8 ">
                     <h1 class="text-6xl font-bold mb-4 font-atma text-gray-200 tracking-wide text-outline">RATE MY CLASS</h1>

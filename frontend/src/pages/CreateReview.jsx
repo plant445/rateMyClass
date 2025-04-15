@@ -55,10 +55,6 @@ const CreateReview = () => {
 
     return (
       <div>
-        <div class="mb-12">
-            <Header />
-        </div>
-
         <div>
           <h1 className='font-atma text-5xl flex justify-center mb-10'>Upload your Review!</h1>
         </div>
