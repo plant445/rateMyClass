@@ -3,28 +3,37 @@ Milestone 03
 
 Repository Link
 ---
-(TODO: add the link to your repository in github, such as, https://github.com/[COURSE]/[REPO_NAME])
+https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-plant445
 
 URL for form 1 (from previous milestone) 
 ---
-(TODO: add link to a functioning form)
+https://github.com/plant445/rateMyClass/blob/main/frontend/src/pages/CreateReview.jsx
 
 Special Instructions for Form 1
 ---
-(TODO: if your app requires special instructions to use or if your app requires authentication, add information here; otherwise, leave blank)
+This is a create review form. Now I have implemented authorization where users must login before being able to upload a review. When clicking the review header, a login modal will pop up. You can choose to either register your own test account or use a premade one which is {username: seantang1, password: seantang1}
 
 URL for form 2 (for current milestone)
 ---
-(TODO: if applicable, add link to page that shows results of submitting form)
+https://github.com/plant445/rateMyClass/blob/main/frontend/src/components/LoginModal.jsx
 
 Special Instructions for Form 2
 ---
-(TODO: if your app requires special instructions to use or if your app requires authentication, add information here; otherwise, leave blank)
+This is the form for logging and registering a user. You can either press login or rate and if you are not logged in you will be forced to login to access certain features. You can choose to register a new account or use the premade account {username: seantang1, password: seantang1}. After logging in you can see that you are logged in and can log out. 
+
+I have not finished implementing the profile page where a user can see their own reviews.
 
 URL(s) to github repository with commits that show progress on research
 --- 
-(TODO: add link to github url that shows line or lines of code that demonstrate continued progress on research topics)
+
+https://github.com/plant445/rateMyClass - This is the repository that I worked on and you can see my commits that show progress.
+
+https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-plant445 -  This is the class one where I moved my code over to test deployment.
 
 References 
 ---
-(TODO: if applicable, links to annotated lines of code in github repository that were based off of tutorials / articles / sample projects)
+
+https://www.npmjs.com/package/jsonwebtoken
+https://strapi.io/blog/introduction-to-jwt-and-cookie-storage
+https://stackoverflow.com/questions/43002444/make-axios-send-cookies-in-its-requests-automatically
+https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html 

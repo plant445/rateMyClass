@@ -5,6 +5,7 @@ import CreateReview from './pages/CreateReview.jsx'
 import Reviews from './pages/Reviews.jsx'
 import Header from './components/Header.jsx';
 import LoginModal from './components/LoginModal.jsx';
+import Profile from './pages/Profile.jsx'
 import axios from 'axios'
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreateReview />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/reviews/:username" element={<Profile />} />
       </Routes>
     </>
   )

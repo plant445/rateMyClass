@@ -1,15 +1,9 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
-
-(__TODO__: your project name)
-
 # RateMyClass
 
 ## Overview
 
 
-College students have heard RateMyProfessor, the site where students go to check out a professor rating. Some may have even
-heard of RateMyDorm which provides information on university dorms across the nation. Introducing RateMyClass, a site where 
-students can creates an account to upload their ratings of individuals classes at NYU.
+College students have heard RateMyProfessor, the site where students go to check out a professor rating. Some may have even heard of RateMyDorm which provides information on university dorms across the nation. Introducing RateMyClass, a site where  students can creates an account to upload their ratings of individuals classes at NYU.
 
 Students users can create their account to have authorization to upload ratings, but can view ratings without creating an account.
 Within the rating section students select a rating for Overall, Difficulty, Engagement, and Take Again? while specifying the course, department, and their professor. They are also required to give comment/description of the class. On the page to view each course, visitors can see an overall rating, for the class and the comments and specialized ratings left by each user
@@ -26,9 +20,9 @@ An Example User:
 
 ```javascript
 {
-  user_id: "user123",
+  _id: "ObjectID()",
   username: "collegestudent",
-  hash: // a password hash,
+  password: "collegestudent1",
   review: // an array of references to review documents
 }
 ```
@@ -88,7 +82,7 @@ An Example Review with Embedded Ratings:
 3. as a user, I can log in to the site
 4. as a user, I can create a new rating
 5. as a user, I can view all of the ratings I've created in the past
-6. as a user, I can add edit and delete my ratings
+6. as a user, I can add delete my ratings
 
 
 ## Research Topics
@@ -97,13 +91,11 @@ An Example Review with Embedded Ratings:
 
 * (3 points) jsonwebtoken
     * I want to use JWT to allow users to access certain parts of my site only when they logged in and this module seems to work well with a react.js front-end.
-* (2 points) cors
-    * I need cors since my backend and frontend will be deployed on different pots 
 * (3 points) axios
     * I need axios since it simplifies API requests between frontend and backend as well as automatically attaching authentication tokens(JWT) for protected actions
-* (2 points) react.js
-    * used react.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 
-* (1 point) tailwind
+* (3 points) react.js
+    * used react.js as the frontend framework; it's a challenging library, so I've assigned it 3
+* (2 point) tailwind
     * I will be using tailwind for css
 * (1 point) react-simple-star-rating
     * I want to make a rating using stars for users to rate classes from 1 to 5
@@ -112,15 +104,17 @@ An Example Review with Embedded Ratings:
 
 
 ## [Link to Initial React Frontend App](frontend/src/App.jsx) 
-## [Link to Initial Backend] (backend/)
-## [Link to backend app] (backend/app.mjs)
+## [Link to backend app](backend/app.mjs)
 
-(__TODO__: create a skeleton Express application with a package.json, app.mjs, views folder, etc. ... and link to your initial app.mjs)
 
 ## Annotations / References Used
 
-(__TODO__: list any tutorials/references/etc. that you've based your code off of)
+1. [star package](https://www.npmjs.com/package/react-simple-star-rating) - (https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-plant445/blob/master/frontend/src/pages/CreateReview.jsx#L109-L193)
 
-1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
-2. [tutorial on vue.js](https://vuejs.org/v2/guide/) - (add link to source code that was based on this)
+2. [jwt + cookie link 1](https://www.npmjs.com/package/jsonwebtoken)
+   [jwt + cookie link 2](https://strapi.io/blog/introduction-to-jwt-and-cookie-storage)
+
+   (https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-plant445/blob/master/backend/controllers/userController.js)
+
+3. [authentication tip](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html )
 

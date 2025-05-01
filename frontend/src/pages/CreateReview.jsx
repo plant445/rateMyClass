@@ -43,7 +43,7 @@ const CreateReview = () => {
       }
       setError('');
       try {
-          const response = await axios.post(`/api/create`, formData)
+          const response = await axios.post(`/api/reviews`, formData)
           if (response.status === 201) {
             navigate('/reviews')
           }

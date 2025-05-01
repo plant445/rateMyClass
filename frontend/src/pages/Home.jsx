@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../index.css';
 import Header from '../components/Header.jsx'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const [input, setInput] = useState('')
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        navigate(`/reviews/?search=${encodeURIComponent(input)}`)
+    }
     return (
         <div>
             <div class='bg-[url(images/coursestock.jpg)] bg-cover bg-center pt-20 pb-1 mb-15'>
@@ -13,13 +21,12 @@ const Home = () => {
 
 
                 <div class='flex justify-center mb-25'>
-                    <form>
-                        {/* onSubmit={handleSubmit} */}    
+                    <form onSubmit={handleSubmit}>
                         <input
                             type="text"
-                            // value = {name}
+                            value={input}
                             placeholder='Your class...'
-                            // onChange={(e) => setName(e.target.value)}
+                            onChange={(e) => setInput(e.target.value)}
                             className='border-2 border-white w-60 h-10 pl-3 font-atma rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-gray-300'
                         />
                         <button
